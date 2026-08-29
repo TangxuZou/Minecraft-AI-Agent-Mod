@@ -27,10 +27,14 @@ The mod solves the issue of complex command syntax. Instead of memorizing NBT ta
 
 ### Steps
 
-**Step 1: Install the Mod**
-- Download the `.jar` file from the Releases page.
+**Step 1: Install Fabric Loader and the Mod**
+- Download and run the [Fabric Installer](https://fabricmc.net/use/installer/) (the `.exe` file for Windows).
+- The installer will automatically select the latest Loader version (**0.19.3**) for Minecraft 26.2.
+- This will create a `fabric-loader-26.2` profile in your official Minecraft Launcher.
+- **Important:** You also need the **Fabric API** (version **0.154.2+26.2**) placed in your `mods` folder, as it is required by almost all Fabric mods to function.
+- Finally, download the `.jar` file from the Releases page.
 - Navigate to your Minecraft `mods` folder (usually `C:\Users\[YourName]\AppData\Roaming\.minecraft\mods`).
-- Place the `.jar` file inside this folder.
+- Place **both** the `.jar` file and the **Fabric API** `.jar` inside this folder.
 
 **Step 2: Set the Environment Variable**
 
