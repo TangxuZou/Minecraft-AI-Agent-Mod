@@ -30,7 +30,7 @@ In-game, type:
 Examples:
 - `/agent make it night`
 - `/agent summon a creeper`
-- `/agent give me a diamond sword with sharpness 5`
+- `/agent protect me`
 
 ## Security
 The API key is read entirely from the environment variable `GEMINI_API_KEY`. It is not hardcoded and is excluded from the repository.
