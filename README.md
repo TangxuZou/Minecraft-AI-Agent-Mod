@@ -46,7 +46,7 @@ The mod solves the issue of complex command syntax. Instead of memorizing NBT ta
 3. Right-click on **Windows PowerShell** and select **Run as administrator**.
 4. Copy and paste this exact command into the window (replace `YOUR_API_KEY_HERE` with your actual key):
 
-setx GEMINI_API_KEY "YOUR_API_KEY_HERE"
+        setx GEMINI_API_KEY "YOUR_API_KEY_HERE"
 
 5. Press **Enter**. You should see a message saying "SUCCESS: Specified value was saved."
 6. **CRITICAL:** Close the PowerShell window. **Restart your computer** (or at minimum, completely close and reopen the Minecraft Launcher). Usually, a full computer restart is the most reliable way to make the variable stick.
