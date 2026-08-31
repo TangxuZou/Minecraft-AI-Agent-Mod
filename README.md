@@ -19,6 +19,29 @@ The mod solves the issue of complex command syntax. Instead of memorizing NBT ta
 
 ---
 
+## Reviewer's Guide: Key Source Files
+**For judges evaluating the technical execution, here are the specific files to review in this repository:**
+
+**1. src/main/java/com/tz/aiagent/AIAgentMod.java**
+
+What to look for: The entry point of the mod. This file registers the /agent command using Minecraft 26.2's modern Commands.literal and sendSuccess APIs. It shows how the player's input is captured and how the resulting command is executed back onto the main server thread using getServer().execute() and performPrefixedCommand().
+
+**2. src/main/java/com/tz/aiagent/GeminiService.java**
+
+What to look for: The core AI integration.
+
+Threading: Look for the CompletableFuture usage. This proves the HTTP requests are handled on background threads, preventing the game from freezing.
+
+Prompt Engineering: Look at the SYSTEM_PROMPT variable. This shows the strict instructions used to force the AI to return only raw commands, eliminating conversational filler.
+
+Security: Look for the System.getenv("GEMINI_API_KEY") line. This demonstrates that the API key is loaded from a system environment variable rather than being hardcoded or exposed in the compiled JAR.
+
+**3. build.gradle**
+
+What to look for: The dependency configuration. This confirms the usage of Gson for JSON parsing and the correct Fabric Loom and Java (JDK 25) setup for Minecraft 26.2.
+
+---
+
 ## Setup & Installation (For Judges & Players)
 
 ### Prerequisites
